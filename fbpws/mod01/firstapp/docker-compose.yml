@@ -1,0 +1,8 @@
+version: '3'
+services:
+  application:
+    build: ./firstapp
+    volumes:
+      - "./firstapp:/var/www/html"
+    ports:
+      - "80:80"
