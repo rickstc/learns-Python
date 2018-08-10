@@ -22,7 +22,6 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="firstapp.py" />
     <Compile Include="hello.py">
       <SubType>Code</SubType>
     </Compile>
