@@ -6,7 +6,40 @@
         <title>Headlines</title>
     </head>
     <body>
-        <h1>Headlines</h1>
+
+        <h1>Headlines Project Home Page</h1>
+        <h2>Currency</h2>
+        1 {{currency_from}} = {{currency_to}} {{rate}}
+        <form>
+            from:
+            <select name="currency_from">
+                {% for currency in currencies %}
+                <option value="{{currency}}"{% if currency == currency_from %} selected="selected"{% endif %}>{{currency}}</option>
+                {% endfor %}
+            </select>
+            to:
+            <select name="currency_to">
+                {% for currency in currencies %}
+                <option value="{{currency}}"{% if currency == currency_to %}selected="selected"{% endif %}>{{currency}}</option>
+                {% endfor %}
+            </select>
+            <input type="submit" value="Submit" />
+        </form>
+
+        <h2>Current Weather</h2>
+        <form>
+            <input type="text" name="city" placeholder="weather search" />
+            <input type="submit" value="Submit" />
+        </form>
+        <p>City: <strong>{{weather.city}}, {{weather.country}}</strong></p>
+        <p>{{weather.description}} | {{weather.temperature}}</p>
+
+
+        <h2>Headlines</h2>
+        <form>
+            <input type="text" name="publication" placeholder="search" />
+            <input type="submit" value="Submit" />
+        </form>
         {% for article in articles %}
         <strong><a href="{{article.link}}" target="_blank">{{article.title}}</a></strong>
         <em>{{ article.published }}</em>
