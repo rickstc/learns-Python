@@ -1,0 +1,4 @@
+Things to keep in mind:
+- Python is case sensitive
+- Spacing is important
+- Use error messages to help you learn
